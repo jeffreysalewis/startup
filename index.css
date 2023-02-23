@@ -35,7 +35,7 @@ a:hover, a:active {
 }
 
 button {
-  background-color: #ff88aa;
+  background-color: #7700aa;
   color: white;
   padding: 14px 25px;
   border-radius: 5px;
@@ -45,5 +45,5 @@ button {
 }
 
 button:hover, button:active {
-  background-color: #ffaacc;
+  background-color: #9922cc;
 }
