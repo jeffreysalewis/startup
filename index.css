@@ -33,3 +33,13 @@ a:link, a:visited {
 a:hover, a:active {
   background-color: #ffaacc;
 }
+
+button {
+  background-color: #ff88aa;
+  color: white;
+  padding: 14px 25px;
+  border-radius: 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+}
