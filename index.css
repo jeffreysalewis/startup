@@ -4,11 +4,14 @@
 }
 
 * {
-  background-color: black;
   color:white;
   /*font-family: "Comic Sans MS", "Comic Sans", cursive;*/
   font-family: "Nothing+You+Could+Do", "Comic Sans", cursive;
   box-sizing: border-box;
+}
+
+body {
+  background-color: black;
 }
 
 a:link, a:visited {
