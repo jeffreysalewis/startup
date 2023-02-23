@@ -5,17 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
-    <title>Startup - Move!</title>
+    <title>Startup Game</title>
     <link rel="shortcut icon" href="https://drive.google.com/uc?export=view&id=1zk8xYGeGP5-3Dum8drbGtZ-aVZKou6m-">
     <link rel="apple-touch-icon" href="https://drive.google.com/uc?export=view&id=1zk8xYGeGP5-3Dum8drbGtZ-aVZKou6m-">
   </head>
   <body>
     <header>
-      <h1>Startup - Move!</h1>
+      <h1>Startup Game</h1>
     </header>
     <main>
+      <canvas id="myCanvas" width="600" height="600" 
+                style="border:1px solid #000000;">
+        </canvas>        
+        
+        <div style="text-align:center;width:480px;">
+            <button onclick="moveup()">UP</button><br><br>
+            <button onclick="moveleft()">LEFT</button>
+            <a href="index.html">
+                <button>RESET</button>
+            </a>
+            <button onclick="moveright()">RIGHT</button><br><br>
+            <button onclick="movedown()">DOWN</button>
+        </div>
       <section>
-        <canvas></canvas>
         <a href="https://jeffreysalewis.com" target="_blank" rel="noopener noreferrer">Home</a>
       </section>
     </main>
