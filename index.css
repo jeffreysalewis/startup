@@ -5,11 +5,11 @@
 }
 
 header {
-  flex: 0 80px;
+  flex: 1 80px;
 }
 
 menu {
-  flex: 1;
+  flex: 0;
   display: flex;
   flex-direction: row !important;
   list-style: none;
