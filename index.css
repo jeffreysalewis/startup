@@ -13,7 +13,7 @@ body {
   background-color: black;
 }
 
-canvas {
+canvas#myCanvas {
   width: 600px;
   height: 600px;
   border: 1px solid white;
@@ -45,4 +45,9 @@ button {
 
 button:hover, button:active {
   background-color: #9922cc;
+}
+
+div#ctrl {
+  text-align:center;
+  width:480px;
 }
