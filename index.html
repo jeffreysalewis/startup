@@ -5,13 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+    crossorigin="anonymous" />
     <title>Startup Game</title>
     <link rel="shortcut icon" href="https://drive.google.com/uc?export=view&id=1zk8xYGeGP5-3Dum8drbGtZ-aVZKou6m-">
     <link rel="apple-touch-icon" href="https://drive.google.com/uc?export=view&id=1zk8xYGeGP5-3Dum8drbGtZ-aVZKou6m-">
   </head>
   <body>
-    <header>
-      <h1>Startup Game</h1>
+    <header class="container-fluid">
+      <nav class="navbar fixed-top navbar-dark">
+        <a class="navbar-brand" href="#">Startup</a>
+        <menu class="navbar-nav">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="play.html">Play</a></li>
+          <li class="nav-item"><a class="nav-link" href="scores.html">Scores</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        </menu>
+      </nav>
     </header>
     <main>
       <canvas id="myCanvas">
@@ -26,7 +38,7 @@
       <br>
       <section>
         <a href="index.html">RESET</a>
-        <a href="https://jeffreysalewis.com" target="_blank" rel="noopener noreferrer">Home</a>
+        <a href="https://jeffreysalewis.com" target="_blank" rel="noopener noreferrer">Jeff's Website</a>
       </section>
     </main>
   </body>
