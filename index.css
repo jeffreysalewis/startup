@@ -5,7 +5,7 @@
 }
 
 header {
-  flex: 1 80px;
+  flex: 0 80px;
 }
 
 menu {
@@ -17,11 +17,11 @@ menu {
 
 .navbar-brand {
   padding-left: 0.3em;
-  border-bottom: solid rgb(182, 182, 182) thin;
 }
 
 menu .nav-item {
   padding: 0 0.3em;
+  align-items: left;
 }
 
 body {
