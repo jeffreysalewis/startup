@@ -1,12 +1,27 @@
-@font-face {
-  font-family: 'Nothing+You+Could+Do';
-  src: url('https://fonts.googleapis.com/css?family=Nothing+You+Could+Do');
-}
-
 * {
   color:white;
   font-family: "Arial", "sans-serif", sans-serif;
   box-sizing: border-box;
+}
+
+header {
+  flex: 0 80px;
+}
+
+menu {
+  flex: 1;
+  display: flex;
+  flex-direction: row !important;
+  list-style: none;
+}
+
+.navbar-brand {
+  padding-left: 0.3em;
+  border-bottom: solid rgb(182, 182, 182) thin;
+}
+
+menu .nav-item {
+  padding: 0 0.3em;
 }
 
 body {
