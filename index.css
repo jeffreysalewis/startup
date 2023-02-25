@@ -80,6 +80,10 @@ div#ctrl {
   width:480px;
 }
 
+tbody {
+  color: black;
+}
+
 footer {
   flex: 0;
   padding: 10px;
