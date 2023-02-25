@@ -68,7 +68,7 @@ button {
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  border: none;
+  border: thin #7700aa;
 }
 
 button:hover, button:active {
