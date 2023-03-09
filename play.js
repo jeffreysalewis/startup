@@ -88,12 +88,12 @@ function main() {
     for (var i = 0; i < 7; i++) {
         var y = Math.floor(Math.random() * (-580) - 600);
         var x = Math.floor(Math.random() * (440));
-        enemy[i] = new GamePiece(x, y, 35, 35, "enemy.gif", gameBoard.context, 'y');
+        enemy[i] = new GamePiece(x, y, 35, 35, enemygif, gameBoard.context, 'y');
         enemy[i].changeAddY(1);
         enemy[i].draw;
     }
-    laser = new GamePiece(-10, -10, 2, 10, "laser.gif", gameBoard.context, 'y');
-    laser2 = new GamePiece(-10, -10, 2, 10, "laser.gif", gameBoard.context, 'y');
+    laser = new GamePiece(-10, -10, 2, 10, lasergif, gameBoard.context, 'y');
+    laser2 = new GamePiece(-10, -10, 2, 10, lasergif, gameBoard.context, 'y');
     gameBoard.start();
 }
 
@@ -183,7 +183,7 @@ function action(event) {
 
 function actionUp(event) {
     if (event.key === 'a' || 'd') {
-        player.color = spacegif;
+        player.color = shipgif;
     }
     main2();
 }
