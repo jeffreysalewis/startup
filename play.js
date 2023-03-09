@@ -74,3 +74,19 @@ function GamePiece(x, y, w, h, c, ctx, yn) {
         return crash;
     };
 }
+
+function main() {
+    gameBoard = new GameArea(document.getElementById("myCanvas"));
+    player = new GamePiece(265, 550, 35, 35, "ship.gif", gameBoard.context, 'n');
+    player.draw();
+    for (var i = 0; i < 7; i++) {
+        var y = Math.floor(Math.random() * (-580) - 600);
+        var x = Math.floor(Math.random() * (440));
+        enemy[i] = new GamePiece(x, y, 35, 35, "enemy.gif", gameBoard.context, 'y');
+        enemy[i].changeAddY(1);
+        enemy[i].draw;
+    }
+    laser = new GamePiece(-10, -10, 2, 10, "laser.gif", gameBoard.context, 'y');
+    laser2 = new GamePiece(-10, -10, 2, 10, "laser.gif", gameBoard.context, 'y');
+    gameBoard.start();
+}
