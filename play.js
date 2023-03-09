@@ -156,3 +156,28 @@ function main2() {
     document.addEventListener("keydown", action);
     document.addEventListener("keyup", actionUp);
 }
+
+function action(event) {
+    var arr = ['a', 'd', 's', 'w'];
+    for (var i = 0; i < 4; i++) {
+        if (arr[i] === event.key) {
+            if (event.key === 'a') {
+                move(-5);
+            } else if (event.key === 'd') {
+                move(5);
+            } else if (event.key === 's') {
+                lasers();
+            } else if (event.key === 'w') {
+                lasers2();
+            }
+        }
+    }
+    main2();
+}
+
+function actionUp(event) {
+    if (event.key === 'a' || 'd') {
+        player.color = "ship.gif";
+    }
+    main2();
+}
