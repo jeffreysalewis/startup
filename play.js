@@ -77,7 +77,7 @@ function GamePiece(x, y, w, h, c, ctx, yn) {
 
 function main() {
     gameBoard = new GameArea(document.getElementById("myCanvas"));
-    player = new GamePiece(265, 550, 35, 35, "ship.gif", gameBoard.context, 'n');
+    player = new GamePiece(265, 550, 35, 35, "https://drive.google.com/uc?export=view&id=1iWsWodmzV96liCBX2l-iDbmifpV-Z42W", gameBoard.context, 'n');
     player.draw();
     for (var i = 0; i < 7; i++) {
         var y = Math.floor(Math.random() * (-580) - 600);
@@ -177,7 +177,7 @@ function action(event) {
 
 function actionUp(event) {
     if (event.key === 'a' || 'd') {
-        player.color = "ship.gif";
+        player.color = "https://drive.google.com/uc?export=view&id=1iWsWodmzV96liCBX2l-iDbmifpV-Z42W";
     }
     main2();
 }
