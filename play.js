@@ -139,3 +139,20 @@ function move(num) {
     }
     player.begx += num;
 }
+
+function lasers() {
+    laser.begx = player.begx + 17;
+    laser.begy = player.begy - 10;
+    laser.changeAddY(-1);
+}
+
+function lasers2() {
+    laser2.begx = player.begx + 17;
+    laser2.begy = player.begy - 10;
+    laser2.changeAddY(-1);
+}
+
+function main2() {
+    document.addEventListener("keydown", action);
+    document.addEventListener("keyup", actionUp);
+}
