@@ -90,3 +90,31 @@ function main() {
     laser2 = new GamePiece(-10, -10, 2, 10, "laser.gif", gameBoard.context, 'y');
     gameBoard.start();
 }
+
+function updateGameArea() {
+    gameBoard.clear();
+    for (var i = 0; i < 7; i++) {
+        if (enemy[i].begy > 600) {
+            enemy[i].begy = Math.floor(Math.random() * (-580) - 20);
+            enemy[i].begx = Math.floor(Math.random() * (565));
+            enemy[i].addY++;
+        }
+        enemy[i].draw();
+        if (player.crashWith(enemy[i])) {
+            gameBoard.stop();
+        } else if (laser.crashWith(enemy[i])) {
+            enemy[i].begy = Math.floor(Math.random() * (-580) - 20);
+            enemy[i].begx = Math.floor(Math.random() * (565));
+            enemy[i].addY++;
+            laser.begx = -10;
+        } else if (laser2.crashWith(enemy[i])) {
+            enemy[i].begy = Math.floor(Math.random() * (-580) - 20);
+            enemy[i].begx = Math.floor(Math.random() * (565));
+            enemy[i].addY++;
+            laser2.begx = -10;
+        }
+    }
+    player.draw();
+    laser.draw();
+    laser2.draw();
+}
