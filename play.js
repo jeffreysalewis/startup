@@ -118,3 +118,24 @@ function updateGameArea() {
     laser.draw();
     laser2.draw();
 }
+
+function moveleft() {
+    player.color = "ship-move.gif";
+    player.changeAddX(-1);
+}
+
+function moveright() {
+    player.color = "ship-move.gif";
+    player.changeAddX(1);
+}
+
+function move(num) {
+    player.color = "ship-move.gif";
+    console.log(player.begx);
+    if (player.begx < 0) {
+        player.begx = 0;
+    } else if (player.begx > 565) {
+        player.begx = 565;
+    }
+    player.begx += num;
+}
