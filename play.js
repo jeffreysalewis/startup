@@ -1,5 +1,8 @@
 var gameBoard, player, enemy, laser, laser2;
 enemy = [];
+var shipgif = "https://drive.google.com/uc?export=view&id=1iWsWodmzV96liCBX2l-iDbmifpV-Z42W";
+var shipmovegif = "https://drive.google.com/uc?export=view&id=1p_tgCNAlcCokNIcZrLlFQRiCIiqg8AOw";
+var spacegif = "https://drive.google.com/uc?export=view&id=1FDjHGnhbkVbZVJiMHw14bboDWE55Bzd4";
 
 function GameArea(can) {
     
@@ -77,7 +80,7 @@ function GamePiece(x, y, w, h, c, ctx, yn) {
 
 function main() {
     gameBoard = new GameArea(document.getElementById("myCanvas"));
-    player = new GamePiece(265, 550, 35, 35, "https://drive.google.com/uc?export=view&id=1iWsWodmzV96liCBX2l-iDbmifpV-Z42W", gameBoard.context, 'n');
+    player = new GamePiece(265, 550, 35, 35, shipgif, gameBoard.context, 'n');
     player.draw();
     for (var i = 0; i < 7; i++) {
         var y = Math.floor(Math.random() * (-580) - 600);
@@ -120,17 +123,17 @@ function updateGameArea() {
 }
 
 function moveleft() {
-    player.color = "ship-move.gif";
+    player.color = shipmovegif;
     player.changeAddX(-1);
 }
 
 function moveright() {
-    player.color = "ship-move.gif";
+    player.color = shipmovegif;
     player.changeAddX(1);
 }
 
 function move(num) {
-    player.color = "ship-move.gif";
+    player.color = shipmovegif;
     console.log(player.begx);
     if (player.begx < 0) {
         player.begx = 0;
@@ -177,7 +180,7 @@ function action(event) {
 
 function actionUp(event) {
     if (event.key === 'a' || 'd') {
-        player.color = "https://drive.google.com/uc?export=view&id=1iWsWodmzV96liCBX2l-iDbmifpV-Z42W";
+        player.color = spacegif;
     }
     main2();
 }
