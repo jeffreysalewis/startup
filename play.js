@@ -12,7 +12,7 @@ function GameArea(can) {
     
     this.clear = function() {
         var image = new Image();
-        image.src = "Space.gif";
+        image.src = "https://drive.google.com/uc?export=view&id=1FDjHGnhbkVbZVJiMHw14bboDWE55Bzd4";
         this.context.drawImage(image, 0, 0, this.canvas.width, this.canvas.height);
     };
     
