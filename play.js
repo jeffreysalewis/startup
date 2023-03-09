@@ -1,8 +1,11 @@
 var gameBoard, player, enemy, laser, laser2;
 enemy = [];
+var spacegif = "https://drive.google.com/uc?export=view&id=1FDjHGnhbkVbZVJiMHw14bboDWE55Bzd4";
 var shipgif = "https://drive.google.com/uc?export=view&id=1iWsWodmzV96liCBX2l-iDbmifpV-Z42W";
 var shipmovegif = "https://drive.google.com/uc?export=view&id=1p_tgCNAlcCokNIcZrLlFQRiCIiqg8AOw";
-var spacegif = "https://drive.google.com/uc?export=view&id=1FDjHGnhbkVbZVJiMHw14bboDWE55Bzd4";
+var enemygif = "https://drive.google.com/uc?export=view&id=1XqwqIYJ8AnERVeP5LJMyDZt0k7rF9LVM";
+var lasergif = "https://drive.google.com/uc?export=view&id=1R2WsLspVy0XtVVd2YMQcp4r3AvU-bOvN";
+
 
 function GameArea(can) {
     
