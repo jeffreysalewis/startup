@@ -75,7 +75,7 @@ div#ctrl {
 }
 
 footer {
-  flex: 0;
+  flex: 0 80px;
   padding: 10px;
 }
 
