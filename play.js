@@ -39,6 +39,7 @@ function GamePiece(x, y, w, h, c, ctx, yn) {
     this.height = h;
     this.yesno = yn;
     this.context = ctx;
+    this.canvas = document.getElementById("myCanvas");
     
     this.changeAddX = function(num) {
         this.addX += num;
@@ -51,7 +52,7 @@ function GamePiece(x, y, w, h, c, ctx, yn) {
     this.draw = function() {
         this.context.fillStyle = this.color;
         if (this.yesno === 'n') {
-            if ((this.begx > 565) || (this.begx < 0)) {
+            if ((this.begx > this.canvas.width - 35) || (this.begx < 0)) {
                 this.addX *= -1;
             }
         }
@@ -82,12 +83,13 @@ function GamePiece(x, y, w, h, c, ctx, yn) {
 }
 
 function main() {
-    gameBoard = new GameArea(document.getElementById("myCanvas"));
-    player = new GamePiece(265, 550, 35, 35, shipgif, gameBoard.context, 'n');
+    var canvas = document.getElementById("myCanvas");
+    gameBoard = new GameArea(canvas);
+    player = new GamePiece(Math.floor(canvas.width / 2), (canvas.height - 50), 35, 35, shipgif, gameBoard.context, 'n');
     player.draw();
     for (var i = 0; i < 7; i++) {
-        var y = Math.floor(Math.random() * (-580) - 600);
-        var x = Math.floor(Math.random() * (440));
+        var y = Math.floor(Math.random() * ((-1 * canvas.height) + 20) - canvas.height);
+        var x = Math.floor(Math.random() * (canvas.width - 35));
         enemy[i] = new GamePiece(x, y, 35, 35, enemygif, gameBoard.context, 'y');
         enemy[i].changeAddY(1);
         enemy[i].draw;
@@ -99,25 +101,21 @@ function main() {
 
 function updateGameArea() {
     gameBoard.clear();
+    var canvas = document.getElementById("myCanvas");
     for (var i = 0; i < 7; i++) {
-        if (enemy[i].begy > 600) {
-            enemy[i].begy = Math.floor(Math.random() * (-580) - 20);
-            enemy[i].begx = Math.floor(Math.random() * (565));
+        if (enemy[i].begy > canvas.height) {
+            enemy[i].begy = Math.floor(Math.random() * ((-1 * canvas.height) + 20) - 20);
+            enemy[i].begx = Math.floor(Math.random() * (canvas.width - 35));
             enemy[i].addY++;
         }
         enemy[i].draw();
         if (player.crashWith(enemy[i])) {
             gameBoard.stop();
-        } else if (laser.crashWith(enemy[i])) {
-            enemy[i].begy = Math.floor(Math.random() * (-580) - 20);
-            enemy[i].begx = Math.floor(Math.random() * (565));
+        } else if (laser.crashWith(enemy[i]) || laser2.crashWith(enemy[i])) {
+            enemy[i].begy = Math.floor(Math.random() * ((-1 * canvas.height) + 20) - 20);
+            enemy[i].begx = Math.floor(Math.random() * (canvas.width - 35));
             enemy[i].addY++;
             laser.begx = -10;
-        } else if (laser2.crashWith(enemy[i])) {
-            enemy[i].begy = Math.floor(Math.random() * (-580) - 20);
-            enemy[i].begx = Math.floor(Math.random() * (565));
-            enemy[i].addY++;
-            laser2.begx = -10;
         }
     }
     player.draw();
@@ -136,12 +134,13 @@ function moveright() {
 }
 
 function move(num) {
+    var canvas = document.getElementById("myCanvas");
     player.color = shipmovegif;
     console.log(player.begx);
     if (player.begx < 0) {
         player.begx = 0;
-    } else if (player.begx > 565) {
-        player.begx = 565;
+    } else if (player.begx > (canvas.width - 35)) {
+        player.begx = canvas.width - 35;
     }
     player.begx += num;
 }
