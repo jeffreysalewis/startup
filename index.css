@@ -37,9 +37,8 @@ main {
 }
 
 canvas#myCanvas {
-  width: 600px;
-  height: 600px;
-  border: 1px solid white;
+  width: 1000px;
+  height: 400px;
 }
 
 a#sin {
