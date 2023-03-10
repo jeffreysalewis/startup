@@ -5,7 +5,7 @@ var shipgif = "https://drive.google.com/uc?export=view&id=1iWsWodmzV96liCBX2l-iD
 var shipmovegif = "https://drive.google.com/uc?export=view&id=1p_tgCNAlcCokNIcZrLlFQRiCIiqg8AOw";
 var enemygif = "https://drive.google.com/uc?export=view&id=1XqwqIYJ8AnERVeP5LJMyDZt0k7rF9LVM";
 var lasergif = "https://drive.google.com/uc?export=view&id=1R2WsLspVy0XtVVd2YMQcp4r3AvU-bOvN";
-
+var ac = true;
 
 function GameArea(can) {
     
@@ -172,9 +172,9 @@ function action(event) {
             } else if (event.key === 'd') {
                 move(5);
             } else if (event.key === 's') {
-                lasers();
+                cambiarlasers();
             } else if (event.key === 'w') {
-                lasers2();
+                cambiarlasers();
             }
         }
     }
@@ -186,4 +186,14 @@ function actionUp(event) {
         player.color = shipgif;
     }
     main2();
+}
+
+function cambiarlasers() {
+    if(ac) {
+        lasers();
+        ac = false;
+    } else {
+        lasers2();
+        ac = true;
+    }
 }
