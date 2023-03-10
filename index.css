@@ -4,6 +4,12 @@
   box-sizing: border-box;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  min-width: 375px;
+}
+
 header {
   flex: 0 80px;
 }
@@ -22,12 +28,6 @@ menu {
 menu .nav-item {
   padding: 0 0.3em;
   align-items: left;
-}
-
-body {
-  display: flex;
-  flex-direction: column;
-  min-width: 375px;
 }
 
 main {
