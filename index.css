@@ -14,6 +14,18 @@ header {
   flex: 0 80px;
 }
 
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer {
+  flex: 0 30px;
+  padding: 10px;
+}
+
 menu {
   flex: 1;
   display: flex;
@@ -28,12 +40,6 @@ menu {
 menu .nav-item {
   padding: 0 0.3em;
   align-items: left;
-}
-
-main {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
 }
 
 a#sin {
@@ -72,11 +78,6 @@ button:hover, button:active {
 div#ctrl {
   text-align:center;
   width:480px;
-}
-
-footer {
-  flex: 0 30px;
-  padding: 10px;
 }
 
 @media (max-height: 600px) {
