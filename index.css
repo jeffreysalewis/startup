@@ -36,11 +36,6 @@ main {
   align-items: center;
 }
 
-canvas#myCanvas {
-  width: 1000px;
-  height: 400px;
-}
-
 a#sin {
   border-radius: 5px;
 }
