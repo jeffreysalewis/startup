@@ -1,6 +1,6 @@
 # startup - Spaceship/Asteroid Game
 [startup.jeffreysalewis.com](https://startup.jeffreysalewis.com)
-## About (Elevator Pitch)
+## About
 Have you ever wanted to play a fun and challenging space shooter game? Well look no further! Complete with cool art and riveting gameplay, you and your friends will love this game!
 
 ### Key Features:
@@ -13,3 +13,6 @@ Have you ever wanted to play a fun and challenging space shooter game? Well look
 [my profile](https://github.com/jeffreysalewis)
 [simon](https://simon.jeffreysalewis.com)
 [startup](https://startup.jeffreysalewis.com)
+
+###Simon
+Just finished adding web services on Simon! Super cool stuff and similar changes coming soon to my startup.
