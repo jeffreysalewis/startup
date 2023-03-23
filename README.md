@@ -11,8 +11,11 @@ Have you ever wanted to play a fun and challenging space shooter game? Well look
 - Mobile Compatible
 
 [my profile](https://github.com/jeffreysalewis)
+
 [simon](https://simon.jeffreysalewis.com)
+
 [startup](https://startup.jeffreysalewis.com)
+
 
 ### Simon
 Just finished adding web services on Simon! Super cool stuff and similar changes coming soon to my startup.
