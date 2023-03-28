@@ -18,4 +18,4 @@ Have you ever wanted to play a fun and challenging space shooter game? Well look
 
 
 ### Simon
-Just finished adding web services on Simon! Super cool stuff and similar changes coming soon to my startup.
+Just finished adding web services, a database, and a secure encrypted login page on Simon! Super cool stuff and similar changes coming soon to my startup.
