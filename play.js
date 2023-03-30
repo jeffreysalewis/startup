@@ -6,6 +6,9 @@ var shipmovegif = "https://drive.google.com/uc?export=view&id=1p_tgCNAlcCokNIcZr
 var enemygif = "https://drive.google.com/uc?export=view&id=1XqwqIYJ8AnERVeP5LJMyDZt0k7rF9LVM";
 var lasergif = "https://drive.google.com/uc?export=view&id=1R2WsLspVy0XtVVd2YMQcp4r3AvU-bOvN";
 var ac = true;
+//event descriptions
+const GameEndEvent = 'gameEnd';
+const GameStartEvent = 'gameStart';
 
 function GameArea(can) {
     
@@ -15,6 +18,8 @@ function GameArea(can) {
     this.start = function() {
         this.score = 0;
         this.interval = setInterval(updateGameArea, 20);
+        stuff.configureWebSocket();
+        stuff.broadcastEvent(this.getPlayerName(), GameStartEvent, {});
     };
     
     this.clear = function() {
