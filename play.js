@@ -13,6 +13,7 @@ function GameArea(can) {
     this.context = this.canvas.getContext("2d");
     
     this.start = function() {
+        this.score = 0;
         this.interval = setInterval(updateGameArea, 20);
     };
     
@@ -121,6 +122,8 @@ function updateGameArea() {
     player.draw();
     laser.draw();
     laser2.draw();
+    document.getElementById("score").innerHTML = gameBoard.score;
+    gameBoard.score++;
 }
 
 function moveleft() {
