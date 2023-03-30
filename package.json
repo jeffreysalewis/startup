@@ -1,21 +1,21 @@
 {
-  "name": "simon-login",
+  "name": "startup",
   "version": "1.0.0",
-  "description": "This demonstrates creating an HTTP service that provides service endpoints. We use this to provide endpoints for getting and updating the scores.",
+  "description": "An asteriod/space shooter game",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/webprogramming260/simon-login.git"
+    "url": "git+https://github.com/jeffreysalewis/startup.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/webprogramming260/simon-login/issues"
+    "url": "https://github.com/jeffreysalewis/startup/issues"
   },
-  "homepage": "https://github.com/webprogramming260/simon-login#readme",
+  "homepage": "https://github.com/jeffreysalewis/startup#readme",
   "dependencies": {
     "bcrypt": "^5.1.0",
     "cookie-parser": "^1.4.6",
