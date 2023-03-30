@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="index.css" />
+    <link rel="stylesheet" href="login.css" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
     rel="stylesheet"
     integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
@@ -26,14 +27,64 @@
       </nav>
     </header>
     <main class="container-fluid bg-secondary">
-      <br>
-      <h1>Login</h1>
       <div>
-        <input value="Enter name" style="color:black"></input>
-        <br><br>
-        <button class="btn-primary" onclick="window.location.href='play.html';">Play!</button>
+        <h1>Welcome to Simon</h1>
+        <!-- Displayed when needing authentication -->
+        <div id="loginControls" style="display: none">
+          <div class="input-group mb-3">
+            <span class="input-group-text">@</span>
+            <input
+              class="form-control"
+              type="text"
+              id="userName"
+              placeholder="your@email.com"
+            />
+          </div>
+          <div class="input-group mb-3">
+            <span class="input-group-text">🔒</span>
+            <input
+              class="form-control"
+              type="password"
+              id="userPassword"
+              placeholder="password"
+            />
+          </div>
+          <button type="button" class="btn btn-primary" onclick="loginUser()">
+            Login
+          </button>
+          <button type="button" class="btn btn-primary" onclick="createUser()">
+            Create
+          </button>
+        </div>
+        <!-- Displayed when ready to play -->
+        <div id="playControls" style="display: none">
+          <div id="playerName"></div>
+          <button type="button" class="btn btn-primary" onclick="play()">
+            Play
+          </button>
+          <button type="button" class="btn btn-secondary" onclick="logout()">
+            Logout
+          </button>
+        </div>
       </div>
-      <br>
+
+      <!-- Error dialog -->
+      <div class="modal fade" id="msgModal" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content text-dark">
+            <div class="modal-body">error message here</div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
     </main>
     <footer class="bg-dark text-dark text-muted">
       <div class="conatiner-fluid">
