@@ -176,6 +176,7 @@ function lasers2() {
     laser2.changeAddY(-1);
 }
 
+//moved this code to main()
 function main2() {
     //document.addEventListener("keydown", action);
     //document.addEventListener("keyup", actionUp);
