@@ -124,8 +124,8 @@ function updateGameArea() {
         }
         enemy[i].draw();
         if (player.crashWith(enemy[i])) {
-            stuff.saveScore(gameBoard.score);
             gameBoard.stop();
+            stuff.saveScore(gameBoard.score);
         } else if (laser.crashWith(enemy[i]) || laser2.crashWith(enemy[i])) {
             enemy[i].begy = Math.floor(Math.random() * ((-1 * canvas.height) + 20) - 20);
             enemy[i].begx = Math.floor(Math.random() * (canvas.width - 35));
