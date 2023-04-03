@@ -1,5 +1,6 @@
 var gameBoard, player, enemy, laser, laser2;
 enemy = [];
+//loads my painting of space and the pixel art
 var spacegif = "https://drive.google.com/uc?export=view&id=17s4S_kKsq-rcRux8JLtpMEUOIASAfKZQ";
 var shipgif = "https://drive.google.com/uc?export=view&id=1iWsWodmzV96liCBX2l-iDbmifpV-Z42W";
 var shipmovegif = "https://drive.google.com/uc?export=view&id=1p_tgCNAlcCokNIcZrLlFQRiCIiqg8AOw";
@@ -34,6 +35,7 @@ function GameArea(can) {
     };
 }
 
+//basic object function the player and enemies inherit from
 function GamePiece(x, y, w, h, c, ctx, yn) {
     var className = "GamePiece";
     this.begx = x;
@@ -55,6 +57,7 @@ function GamePiece(x, y, w, h, c, ctx, yn) {
         this.addY += num;
     };
     
+    //draws my art on the canvas
     this.draw = function() {
         this.context.fillStyle = this.color;
         if (this.yesno === 'n') {
@@ -70,6 +73,7 @@ function GamePiece(x, y, w, h, c, ctx, yn) {
         this.context.drawImage(image, this.begx, this.begy, this.width, this.height);
     };
     
+    //checks if hitboxes collide
     this.crashWith = function(otherobj) {
         var myleft = this.begx;
         var myright = this.begx + (this.width);
@@ -91,8 +95,10 @@ function GamePiece(x, y, w, h, c, ctx, yn) {
 function main() {
     var canvas = document.getElementById("myCanvas");
     gameBoard = new GameArea(canvas);
+    //draws the player
     player = new GamePiece(Math.floor(canvas.width / 2), (canvas.height - 50), 35, 35, shipgif, gameBoard.context, 'n');
     player.draw();
+    //draws enemies
     for (var i = 0; i < 7; i++) {
         var y = Math.floor(Math.random() * ((-1 * canvas.height) + 20) - canvas.height);
         var x = Math.floor(Math.random() * (canvas.width - 35));
@@ -100,11 +106,13 @@ function main() {
         enemy[i].changeAddY(1);
         enemy[i].draw;
     }
+    //draws the laser
     laser = new GamePiece(-10, -10, 2, 10, lasergif, gameBoard.context, 'y');
     laser2 = new GamePiece(-10, -10, 2, 10, lasergif, gameBoard.context, 'y');
     gameBoard.start();
 }
 
+//"animates" the canvas, moves the player and enemies and lasers
 function updateGameArea() {
     gameBoard.clear();
     var canvas = document.getElementById("myCanvas");
@@ -125,6 +133,8 @@ function updateGameArea() {
             laser.begx = -10;
         }
     }
+    document.addEventListener("keydown", action);
+    document.addEventListener("keyup", actionUp);
     player.draw();
     laser.draw();
     laser2.draw();
@@ -167,8 +177,8 @@ function lasers2() {
 }
 
 function main2() {
-    document.addEventListener("keydown", action);
-    document.addEventListener("keyup", actionUp);
+    //document.addEventListener("keydown", action);
+    //document.addEventListener("keyup", actionUp);
 }
 
 function action(event) {
@@ -196,6 +206,7 @@ function actionUp(event) {
     main2();
 }
 
+//allows player to shoot 2 lasers at a time
 function cambiarlasers() {
     if(ac) {
         lasers();
