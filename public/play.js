@@ -235,7 +235,7 @@ class stuff{
           });
     
           //let other players know the game has ended
-          this.broadcastEvent(userName, GameEndEvent, newScore);
+          //this.broadcastEvent(userName, GameEndEvent, newScore);
     
           // Store what the service gave us as the high scores
           const scores = await response.json();
