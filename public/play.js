@@ -113,7 +113,7 @@ function main() {
 }
 
 //"animates" the canvas, moves the player and enemies and lasers
-function updateGameArea() {
+async function updateGameArea() {
     gameBoard.clear();
     var canvas = document.getElementById("myCanvas");
     for (var i = 0; i < 7; i++) {
@@ -124,7 +124,7 @@ function updateGameArea() {
         }
         enemy[i].draw();
         if (player.crashWith(enemy[i])) {
-            //stuff.saveScore(gameBoard.score);
+            await saveScore(gameBoard.score);
             gameBoard.stop();
         } else if (laser.crashWith(enemy[i]) || laser2.crashWith(enemy[i])) {
             enemy[i].begy = Math.floor(Math.random() * ((-1 * canvas.height) + 20) - 20);
