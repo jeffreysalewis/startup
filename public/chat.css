@@ -1,5 +1,6 @@
 body {
-    display: inline-block;
+    align-items: left;
+    flex-direction: none;
 }
 
 #chat-text {
