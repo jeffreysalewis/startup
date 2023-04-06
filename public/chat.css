@@ -1,6 +1,8 @@
-body {
+main {
+    flex: 1 calc(100vh - 110px);
+    display: block;
     align-items: left;
-    flex-direction: none;
+    justify-content: none;
 }
 
 #chat-text {
