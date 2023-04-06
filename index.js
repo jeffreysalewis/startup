@@ -4,7 +4,6 @@ const express = require('express');
 const app = express();
 const DB = require('./database.js');
 const { PeerProxy } = require('./peerProxy.js');
-const { WebSocketServer } = require('ws');
 
 
 const authCookieName = 'token';
@@ -97,61 +96,6 @@ secureApiRouter.post('/score', async (req, res) => {
   const scores = await DB.getHighScores();
   res.send(scores);
 });
-
-//create a websocket object for chat
-const wss = new WebSocketServer({ noServer: true });
-
-//handle the protocol upgrade from http to websocket
-server.on('upgrade', (request, socket, head) => {
-  wss.handleUpgrade(request, socket, head, function done(ws) {
-    wss.emit('connection', ws, request);
-  });
-});
-
-//keep track of all the connections so we can forward msgs
-let connections = [];
-
-wss.on('connection', (ws) => {
-  const connection = { id: connections.length + 1, alive: true, ws: ws };
-  connections.push(connection);
-
-  //forward msgs to everyone but sender
-  ws.on('message', function message(data) {
-    connections.forEach((c) => {
-      if (c.id !== connection.id) {
-        c.ws.send(data);
-      }
-    });
-  });
-
-  //remove the closed connections so we dont try to forward anymore
-  ws.on('close', () => {
-    connections.findIndex((o, i) => {
-      if (o.id === connection.id) {
-        connections.splice(i, 1);
-        return true;
-      }
-    });
-  });
-
-  //respond to pong msgs by marking the connection alive
-  ws.on('pong', () => {
-    connection.alive = true;
-  });
-});
-
-//keep active connections alive
-setInterval(() => {
-  connections.forEach((c) => {
-    //kill any connection that didnt respond to the ping last time
-    if(!c.alive) {
-      c.ws.terminate();
-    } else {
-      c.alive = false;
-      c.ws.ping();
-    }
-  });
-}, 10000);
 
 // Default error handler
 app.use(function (err, req, res, next) {
