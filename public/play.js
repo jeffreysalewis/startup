@@ -218,10 +218,6 @@ function cambiarlasers() {
     }
 }
 
-async function savarlo() {
-    await saveScore(gameBoard.score);
-}
-
 function getPlayerName() {
     return localStorage.getItem('userName') ?? 'Mystery player';
 }
