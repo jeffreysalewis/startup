@@ -219,7 +219,7 @@ function cambiarlasers() {
 }
 
 async function savarlo() {
-    stuff.saveScore(gameBoard.score);
+    await stuff.saveScore(gameBoard.score);
 }
 
 class stuff{
