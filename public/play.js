@@ -222,7 +222,7 @@ async function savarlo() {
     await saveScore(gameBoard.score);
 }
 
-function    getPlayerName() {
+function getPlayerName() {
     return localStorage.getItem('userName') ?? 'Mystery player';
 }
 
