@@ -124,7 +124,7 @@ async function updateGameArea() {
         }
         enemy[i].draw();
         if (player.crashWith(enemy[i])) {
-            await saveScore(gameBoard.score);
+            saveScore(gameBoard.score);
             gameBoard.stop();
         } else if (laser.crashWith(enemy[i]) || laser2.crashWith(enemy[i])) {
             enemy[i].begy = Math.floor(Math.random() * ((-1 * canvas.height) + 20) - 20);
