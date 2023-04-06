@@ -5,6 +5,14 @@ main {
     justify-content: none;
 }
 
+#my-name {
+    color: black;
+}
+
+#new-msg {
+    color: black;
+}
+
 #chat-text {
     padding: 1em 0;
 }
