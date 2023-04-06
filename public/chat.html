@@ -27,7 +27,19 @@
       </nav>
     </header>
     <main class="container-fluid bg-secondary">
+        <div class="name">
+            <fieldset id="name-controls">
+              <legend>My Name</legend>
+              <input id="my-name" type="text" />
+            </fieldset>
+          </div>
       
+          <fieldset id="chat-controls" disabled>
+            <legend>Chat!</legend>
+            <input id="new-msg" type="text" />
+            <button onclick="sendMessage()">Send</button>
+          </fieldset>
+          <div id="chat-text"></div>
     </main>
     <footer class="bg-dark text-dark text-muted">
       <div class="conatiner-fluid">
@@ -37,5 +49,6 @@
         <a class="text-reset" href="https://github.com/jeffreysalewis/startup">Github</a>
       </div>
     </footer>
+    <script src="chatClient.js"></script>
   </body>
 </html>
