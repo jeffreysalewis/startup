@@ -1,12 +1,16 @@
+body {
+    display: inline-block;
+}
+
 #chat-text {
     padding: 1em 0;
 }
 div .friend {
-    color: rgb(119, 87, 153);
+    color: rgb(191, 139, 245);
 margin-left: 0.5em;
 }
 div .me {
-    color: rgb(87, 118, 153);
+    color: rgb(147, 197, 255);
 }
 div .system {
     color: rgb(225, 10, 125);
