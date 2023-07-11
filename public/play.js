@@ -1,7 +1,7 @@
 var gameBoard, player, enemy, laser, laser2;
 enemy = [];
 //loads my painting of space and the pixel art
-var spacegif = "https://drive.google.com/uc?export=view&id=17s4S_kKsq-rcRux8JLtpMEUOIASAfKZQ";
+var spacegif = "/miscosas/starz.gif";
 var shipgif = "https://drive.google.com/uc?export=view&id=1iWsWodmzV96liCBX2l-iDbmifpV-Z42W";
 var shipmovegif = "https://drive.google.com/uc?export=view&id=1p_tgCNAlcCokNIcZrLlFQRiCIiqg8AOw";
 var enemygif = "https://drive.google.com/uc?export=view&id=1XqwqIYJ8AnERVeP5LJMyDZt0k7rF9LVM";
