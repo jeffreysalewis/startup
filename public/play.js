@@ -2,10 +2,10 @@ var gameBoard, player, enemy, laser, laser2;
 enemy = [];
 //loads my painting of space and the pixel art
 var spacegif = "https://64.media.tumblr.com/a85d865d521d5b94534c09b0a8ad87c7/796e8cf6f5207595-47/s2048x3072/5c6b2ca3b956f4f5ba22330f771e023db89953db.gif";
-var shipgif = "/assets/ship.gif";
-var shipmovegif = "/assets/ship-move.gif";
-var enemygif = "/assets/enemy.gif";
-var lasergif = "/assets/laser.gif";
+var shipgif = "/public/assets/ship.gif";
+var shipmovegif = "/public/assets/ship-move.gif";
+var enemygif = "/public/assets/enemy.gif";
+var lasergif = "/public/assets/laser.gif";
 var ac = true;
 //event descriptions
 const GameEndEvent = 'gameEnd';
