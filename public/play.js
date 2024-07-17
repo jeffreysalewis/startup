@@ -2,10 +2,10 @@ var gameBoard, player, enemy, laser, laser2;
 enemy = [];
 //loads my painting of space and the pixel art
 var spacegif = "https://64.media.tumblr.com/a85d865d521d5b94534c09b0a8ad87c7/796e8cf6f5207595-47/s2048x3072/5c6b2ca3b956f4f5ba22330f771e023db89953db.gif";
-var shipgif = "https://drive.google.com/uc?export=view&id=1iWsWodmzV96liCBX2l-iDbmifpV-Z42W";
-var shipmovegif = "https://drive.google.com/uc?export=view&id=1p_tgCNAlcCokNIcZrLlFQRiCIiqg8AOw";
-var enemygif = "https://drive.google.com/uc?export=view&id=1XqwqIYJ8AnERVeP5LJMyDZt0k7rF9LVM";
-var lasergif = "https://drive.google.com/uc?export=view&id=1R2WsLspVy0XtVVd2YMQcp4r3AvU-bOvN";
+var shipgif = "https://64.media.tumblr.com/715eceed1bc5ace16748fdf4c1acae4a/6af020b62e0a41db-9f/s75x75_c1/30499492e3d9d0aa1b6508190d1d5736aa91a3a0.gif";
+var shipmovegif = "https://64.media.tumblr.com/7825ab1ffe28634541dbdb98ebb6fff9/6af020b62e0a41db-f1/s75x75_c1/062fb2b82572fae7fe9428cb92cdc302c75397b3.gif";
+var enemygif = "https://64.media.tumblr.com/bedc6b55d040ce37cadd3ec0f4418ac9/6af020b62e0a41db-8d/s75x75_c1/e221e6105a21f7821298f7357014b310e8e03352.gif";
+var lasergif = "https://64.media.tumblr.com/3d278e2e8e42b9109be527132dfc1946/6af020b62e0a41db-7a/s75x75_c1/9112e648c2ee61b0126040eaebbef890800a207b.gif";
 var ac = true;
 //event descriptions
 const GameEndEvent = 'gameEnd';
